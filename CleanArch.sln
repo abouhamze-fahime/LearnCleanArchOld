@@ -27,6 +27,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{003A3B74-D1A9-
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectUI", "ProjectUI\ProjectUI.csproj", "{4D3D0EED-212F-4D66-81C7-D65BD9BD7FBA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{52D2CA6A-A6A1-4F66-A0EA-D4D0650B9690}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,12 +39,17 @@ Global
 		{4D3D0EED-212F-4D66-81C7-D65BD9BD7FBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4D3D0EED-212F-4D66-81C7-D65BD9BD7FBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4D3D0EED-212F-4D66-81C7-D65BD9BD7FBA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52D2CA6A-A6A1-4F66-A0EA-D4D0650B9690}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52D2CA6A-A6A1-4F66-A0EA-D4D0650B9690}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52D2CA6A-A6A1-4F66-A0EA-D4D0650B9690}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52D2CA6A-A6A1-4F66-A0EA-D4D0650B9690}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{4D3D0EED-212F-4D66-81C7-D65BD9BD7FBA} = {003A3B74-D1A9-4FD7-B3BE-9138845320DD}
+		{52D2CA6A-A6A1-4F66-A0EA-D4D0650B9690} = {E00B989F-4EA0-44C7-BAD8-13531A186B90}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2C31AF63-0D86-443D-A0DD-5B87FA964BB0}
