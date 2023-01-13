@@ -1,4 +1,5 @@
 using Data.Context;
+using Ioc;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -40,6 +41,9 @@ namespace ProjectUI
             options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddDbContext<UniversityDbContext>(options =>
            options.UseSqlServer(Configuration.GetConnectionString("UniversityConnection")));
+
+            DependencyContainer.RegisterService(services, Configuration);
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
