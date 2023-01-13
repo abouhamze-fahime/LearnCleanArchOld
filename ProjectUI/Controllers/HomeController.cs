@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using ApplicationCore.Interfaces;
+using ApplicationCore.ViewModels;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using ProjectUI.Models;
 using System;
@@ -11,11 +13,13 @@ namespace ProjectUI.Controllers
 {
     public class HomeController : Controller
     {
+        private ICourseService _courseService;
         private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger , ICourseService courseService)
         {
             _logger = logger;
+            _courseService = courseService;
         }
 
         public IActionResult Index()
@@ -25,7 +29,8 @@ namespace ProjectUI.Controllers
 
         public IActionResult Privacy()
         {
-            return View();
+           CourseViewModel Cmodel= _courseService.GetAllCourse();
+            return View(Cmodel);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

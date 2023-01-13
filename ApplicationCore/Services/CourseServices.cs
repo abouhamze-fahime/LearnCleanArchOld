@@ -14,7 +14,7 @@ namespace ApplicationCore.Services
         {
             _courseRepository = courseRepository;
         }
-        public CourseViewModel GetCourse()
+        public CourseViewModel GetAllCourse()
         {
             return new CourseViewModel()
             {

@@ -7,6 +7,6 @@ namespace ApplicationCore.Interfaces
 {
    public interface ICourseService
     {
-        CourseViewModel GetCourse();
+        CourseViewModel GetAllCourse();
     }
 }

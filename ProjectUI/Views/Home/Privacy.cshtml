@@ -1,6 +1,45 @@
 ﻿@{
     ViewData["Title"] = "Privacy Policy";
 }
+
+@model ApplicationCore.ViewModels.CourseViewModel
+
 <h1>@ViewData["Title"]</h1>
 
-<p>Use this page to detail your site's privacy policy.</p>
+<div class="container body-content">
+    <div class="row course-content">
+        @*<table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Course Name</th>
+                    <th>Course Description</th>
+                    <th>Course image</th>
+
+                </tr>
+            </thead>
+            <tbody>
+
+                @foreach (var item in Model.Courses)
+                {
+                    <tr>
+                        <td>@item.Id</td>
+                        <td>@item.Name</td>
+                        <td>@item.Description</td>
+                        <td>@item.ImageUrl</td>
+                    </tr>
+                }
+
+            </tbody>
+        </table>*@
+
+        @foreach (var item in Model.Courses)
+        {
+            <div class="course-image-container">
+                <div class="course-image" style="background-image:url(@item.ImageUrl)"></div>
+
+            </div>
+            <span>@item.Name</span>
+        }
+    </div>
+</div>
