@@ -3,9 +3,46 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31829.152
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{B0F240FE-DA98-431F-8CF4-42BEAFA9C292}"
+	ProjectSection(SolutionItems) = preProject
+		Information.txt = Information.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{E00B989F-4EA0-44C7-BAD8-13531A186B90}"
+	ProjectSection(SolutionItems) = preProject
+		DomainInformation.txt = DomainInformation.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{F6B74603-F519-41B7-B16A-B02D749A6B97}"
+	ProjectSection(SolutionItems) = preProject
+		DataInfo.txt = DataInfo.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ioc", "Ioc", "{5BFB5781-4E89-4799-9898-B525D09EFE0C}"
+	ProjectSection(SolutionItems) = preProject
+		DependencyInjectionInfo.txt = DependencyInjectionInfo.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{003A3B74-D1A9-4FD7-B3BE-9138845320DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectUI", "ProjectUI\ProjectUI.csproj", "{4D3D0EED-212F-4D66-81C7-D65BD9BD7FBA}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4D3D0EED-212F-4D66-81C7-D65BD9BD7FBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D3D0EED-212F-4D66-81C7-D65BD9BD7FBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D3D0EED-212F-4D66-81C7-D65BD9BD7FBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D3D0EED-212F-4D66-81C7-D65BD9BD7FBA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4D3D0EED-212F-4D66-81C7-D65BD9BD7FBA} = {003A3B74-D1A9-4FD7-B3BE-9138845320DD}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2C31AF63-0D86-443D-A0DD-5B87FA964BB0}
