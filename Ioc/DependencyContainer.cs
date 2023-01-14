@@ -1,5 +1,6 @@
 ﻿using ApplicationCore.Interfaces;
 using ApplicationCore.Services;
+
 using Data.Repository;
 using Domain.Interfaces;
 using Microsoft.Extensions.Configuration;
@@ -15,7 +16,9 @@ namespace Ioc
         public static void RegisterService(IServiceCollection service , IConfiguration configuration)
         {
             service.AddScoped<ICourseService, CourseServices>();
+            service.AddScoped<IUserService, UserService>();
             service.AddScoped<ICourseRepository, CourseRepository>();
+            service.AddScoped<IUserRepository, UserRepository>();
         }
     }
 }

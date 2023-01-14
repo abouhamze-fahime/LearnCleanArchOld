@@ -14,5 +14,6 @@ namespace Data.Context
         }
 
         public DbSet<Course> Course { get; set; }
+        public DbSet<User> Users { get; set; }
     }
 }

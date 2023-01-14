@@ -8,7 +8,7 @@ namespace Domain.Interfaces
   public  interface ICourseRepository
     {
         IEnumerable<Course> GetAllCourse();
-        Course GetCourse();
+        Course GetCourse(int id);
 
     }
 }

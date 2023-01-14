@@ -19,9 +19,9 @@ namespace Data.Repository
             return _context.Course;
         }
 
-        public Course GetCourse()
+        public Course GetCourse(int id )
         {
-            throw new NotImplementedException();
+            return _context.Course.Find(id);
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using ApplicationCore.Interfaces;
 using ApplicationCore.ViewModels;
+using Domain.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using ProjectUI.Models;
@@ -22,6 +23,12 @@ namespace ProjectUI.Controllers
             _courseService = courseService;
         }
 
+
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        public IActionResult Error()
+        {
+            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
         public IActionResult Index()
         {
             return View();
@@ -33,10 +40,12 @@ namespace ProjectUI.Controllers
             return View(Cmodel);
         }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
+        public IActionResult ShowCourseDetail(int id)
         {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            Course course = _courseService.GetCourse(id);
+            return View(course);
         }
+
+      
     }
 }

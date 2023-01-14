@@ -1,6 +1,7 @@
 ﻿using ApplicationCore.Interfaces;
 using ApplicationCore.ViewModels;
 using Domain.Interfaces;
+using Domain.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -20,6 +21,11 @@ namespace ApplicationCore.Services
             {
                 Courses = _courseRepository.GetAllCourse()
             };
+        }
+
+        public Course GetCourse(int id)
+        {
+            return _courseRepository.GetCourse(id);
         }
     }
 }

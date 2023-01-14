@@ -6,9 +6,9 @@ using System.Text;
 
 namespace ApplicationCore.Interfaces
 {
-   public interface ICourseService
+   public interface IUserService
     {
-        CourseViewModel GetAllCourse();
-        Course GetCourse(int id);
+        CheckUser CheckUser( string email, string mobile);
+        int RegisterUser(User user);
     }
 }
